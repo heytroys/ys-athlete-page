@@ -122,22 +122,11 @@ body {
 
 .main-img {
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .main-img.active {
-    animation: fadeInimg 1s;
     opacity: 1;
-}
-
-
-@keyframes fadeInimg {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 .main-img img {

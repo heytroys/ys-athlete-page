@@ -84,15 +84,15 @@ window.addEventListener('scroll', () => {
 // スクロールしたら表示
 
 const move = function() {
-    const target = document.getElementsByClassName("main-img");
+    const targets = document.getElementsByClassName("main-img");
 
-    const position = Math.floor(window.innerHeight * 1.40);
+    const position = Math.floor(window.innerHeight * 0.75);
 
-    for(let i = 0; i < target.length; i++) {
-        let offsetTop = Math.floor(target[i].getBoundingClientRect().top);
+    for(let i = 0; i < targets.length; i++) {
+        let offsetTop = Math.floor(targets[i].getBoundingClientRect().top);
 
         if (offsetTop < position) {
-            target[i].classList.add('active');
+            targets[i].classList.add('active');
         }
     }
 
@@ -100,6 +100,7 @@ const move = function() {
 }
 
 window.addEventListener("scroll", move, false);
+window.addEventListener("load", move, false);
 
 
 
