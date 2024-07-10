@@ -57,6 +57,7 @@ body {
 #my-profile {
     margin: 150px auto 60px auto;
     background-color: #ddd;
+    border-radius: 7px;
 }
 
 #footer {
