@@ -73,7 +73,7 @@ document.querySelectorAll('.arrow-inner').forEach((arrow, index) => {
 window.addEventListener('scroll', () => {
     document.querySelectorAll('.arrow-inner').forEach((arrow) => {
             const photoTop = arrow.parentElement.offsetTop;
-            if(window.scrollY > photoTop - window.innerHeight + 100) {
+            if(window.scrollY > photoTop - window.innerHeight + 600) {
                 arrow.classList.add('delete');
             }
     });
