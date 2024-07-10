@@ -2,6 +2,10 @@
 
 body {
     animation: fadeIn-all 0.5s;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 @keyframes fadeIn-all {
@@ -20,6 +24,10 @@ body {
 
 #header {
     background-color: rgb(133, 133, 255);
+}
+
+#header h1 span {
+    font-size: 15px;
 }
 
 .container {
