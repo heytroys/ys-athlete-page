@@ -120,6 +120,26 @@ body {
     padding-top: 200px;
 }
 
+.main-img {
+    opacity: 0;
+}
+
+.main-img.active {
+    animation: fadeInimg 1s;
+    opacity: 1;
+}
+
+
+@keyframes fadeInimg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .main-img img {
     border-radius: 7px;
     margin-bottom: 80px;
@@ -129,27 +149,13 @@ body {
     margin-bottom: 120px;
 }
 
-
-/* mainスクロール促す矢印設置
-==================================== */
-
-
-.main-img {
-    position: relative;
-    margin-bottom: 150px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.main-img.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 #main4 .main-img {
     margin-bottom: 0;
 }
+
+
+/* mainスクロール促す矢印設置
+==================================== */
 
 .arrow-inner {
     position: absolute;
@@ -307,16 +313,8 @@ body {
     ============================= */
 
     .main-img {
-        margin-bottom: 250px;
+        margin-bottom: 80px;
     }
-
-    /*
-
-    #main1 .arrow-inner {
-        top: 440px;
-    }
-
-    */
 
 
 }

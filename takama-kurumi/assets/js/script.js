@@ -81,23 +81,25 @@ window.addEventListener('scroll', () => {
 
 
 
+// スクロールしたら表示
 
-// スクロールしたら写真を表示
- 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+const move = function() {
+    const target = document.getElementsByClassName("main-img");
+
+    const position = Math.floor(window.innerHeight * 1.40);
+
+    for(let i = 0; i < target.length; i++) {
+        let offsetTop = Math.floor(target[i].getBoundingClientRect().top);
+
+        if (offsetTop < position) {
+            target[i].classList.add('active');
         }
-    });
-}, {
-    threshold: 0.2 // 20%表示されたらフェードイン
-});
+    }
 
-document.querySelectorAll('.main-img').forEach(photo => {
-    observer.observe(photo);
-});
+    
+}
+
+window.addEventListener("scroll", move, false);
 
 
 
