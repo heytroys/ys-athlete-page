@@ -1,0 +1,57 @@
+
+
+body {
+    animation: fadeIn-all 0.5s;
+}
+
+@keyframes fadeIn-all {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* header
+======================= */
+
+#header {
+    background-color: rgb(133, 133, 255);
+}
+
+.container {
+    max-width: 1400px;
+}
+
+#volley h2 {
+    display: inline-block;
+    border-bottom: 2px solid rgb(68, 118, 255);
+}
+
+
+#volley .volley-link1 {
+    background-color: #ddd;
+    border-radius: 7px;
+}
+
+.volley-takama-img img {
+    border-radius: 7px;
+}
+
+.volley-link1 a {
+    background-color: rgb(68, 118, 255);
+    border-radius: 7px;
+}
+
+#my-profile {
+    margin: 150px auto 60px auto;
+    background-color: #ddd;
+}
+
+#footer {
+    font-size: 10px;
+}
+
