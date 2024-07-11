@@ -176,7 +176,12 @@ body {
 /* footer
 ======================================= */
 
-.footer {
+.footer a {
+    background-color: rgb(68, 118, 255);
+    border-radius: 7px;
+}
+
+.footer .copy {
     font-size: 10px;
 }
 
