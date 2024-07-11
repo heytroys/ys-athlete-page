@@ -179,10 +179,10 @@ body {
 .footer a {
     background-color: rgb(68, 118, 255);
     border-radius: 7px;
-    margin-bottom: 30px;
 }
 
 .footer .copy {
+    margin-top: 30px;
     font-size: 10px;
 }
 
