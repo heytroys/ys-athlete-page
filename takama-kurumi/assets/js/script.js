@@ -14,7 +14,7 @@ $(document).ready(function() {
   
     $(window).resize(function() {
       if ($(window).width() > 768) {
-        $('.header-list').removeClass('hidden visible').css('display', 'flex');
+        $('.header-list').removeClass('hidden visible');
       } else {
         $('.header-list').addClass('hidden').removeClass('visible');
       }
