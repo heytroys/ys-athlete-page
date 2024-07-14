@@ -3,54 +3,24 @@
 // header-list の、設定(三本線など)。
 
 $(document).ready(function() {
-    var prevDisplayState = 'none'; // 前の状態でのdisplayを記録
-
     $('.open-btn1').click(function() {
-        if ($('.header-list').is(':hidden')) {
-            // .header-list をスライドダウンで表示する
-
-            $('.header-list').slideDown(function() {
-                $(this).css('display', 'block');
-                $(this).css('height', 'auto');
-                $(this).addClass('active'); // クラスを追加してアニメーションをトリガー
-            });
-            $(this).addClass('active');
-            prevDisplayState = 'block';
-        } else {
-            // .header-list をスライドアップで非表示にする(アニメーション付き)
-            $('.header-list').slideUp('slow', function() {
-                $(this).css('height', 0);
-                $(this).css('display', 'none');
-                $(this).removeClass('active'); // クラスを削除
-            });
-            // open-btn1 から 'active' クラスを削除する
-            $('.open-btn1').removeClass('active');
-            prevDisplayState = 'none';
-        }
+      if ($('.header-list').hasClass('hidden')) {
+        $('.header-list').removeClass('hidden').addClass('visible');
+      } else {
+        $('.header-list').removeClass('visible').addClass('hidden');
+      }
+      $(this).toggleClass('active');
     });
-
-    // ウィンドウのリサイズイベントを処理
-
+  
     $(window).resize(function() {
-        var width = $(window).width();
-        if (width > 768) {
-            $('.header-list').css({
-                'display': 'flex',
-                'height': 'auto'
-            });
-            $('.open-btn1').removeClass('active');
-        
-        } else {
-            // モバイルサイズに戻る時にメニューを閉じる
-
-            $('.header-list').css({
-                'display': 'none',
-                'height': 0
-            }).removeClass('active');
-            $('.open-btn1').removeClass('active');
-        }
-    }).resize(); // 初回ロード時にリサイズイベントをトリガー
-});
+      if ($(window).width() > 768) {
+        $('.header-list').removeClass('hidden visible').css('display', 'flex');
+      } else {
+        $('.header-list').addClass('hidden').removeClass('visible');
+      }
+      $('.open-btn1').removeClass('active');
+    }).resize();
+  });
 
 
 
