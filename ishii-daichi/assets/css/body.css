@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    z-index: 4;
+}
+
+/* トップページ全体を囲む
+================================= */
+
+#wrapper {
+    background-image: url('../images/daichi1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 100vh;
+    font-family: "Hina Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* eventのなかのスタイル
+================================= */
+
+
+/* eventのなかのページ、全体を囲む(infoぺージ)
+================================= */
+
+
+#container {
+    font-family: "Hina Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    opacity: 1;
+    animation-name: fade-contentsAll;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade-contentsAll {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/daichi1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+
+}
+
+
+
+/* トップページのスタイル再開
+==================================== */
+
+
+#s-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(195, 164, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: opacity 1s ease;
+    animation-name: fadein_start;
+    animation-duration: 1s;
+}
+
+@keyframes fadein_start {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+#fade-logo {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+
+
+/* トップページ header
+================================= */
+
+
+
+
+#header {
+    position: fixed;
+    z-index: 4;
+    background-color: rgb(83, 83, 83);
+}
+
+.header-title .title {
+    color: #ffb342;
+}
+
+#hamburger {
+    display: none;
+}
+
+.pc-nav li a {
+    color: #ffb342;
+}
+
+.sp-nav {
+    display: none;
+}
+
+.footer {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+
+
+
+/* eventのなかのページ、main テーブルのスタイル(infoぺージ)
+================================= */
+
+
+#dai-info {
+    max-width: 1024px;
+    animation-name: fadeInfo;
+    animation-duration: 4.5s;
+    opacity: 1;
+    padding-top: 150px;
+}
+
+@keyframes fadeInfo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dai-info-inner {
+    background-color: rgba(157, 157, 157, 0.8);
+}
+
+.info-title {
+    color: #000;
+}
+
+.dai-info-img {
+    max-width: 100%;
+    background-color: #000;
+}
+
+.dai-info-img img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.info-table {
+    border: 1px solid #000;
+    background-color: #ddd;
+}
+
+.info-table td {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.info-table .td-last {
+    border-bottom: none;
+}
+
+.info-table .topi {
+    border-right: 1px solid #000;
+}
+
+
+
+
+
+/* eventのなかのページ、main テーブルのスタイル(scoreぺージ)
+================================= */
+
+
+#dai-score {
+    max-width: 1024px;
+    animation-name: fadeScore;
+    animation-duration: 4.5s;
+    opacity: 1;
+    padding-top: 150px;
+}
+
+@keyframes fadeScore {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dai-score-inner {
+    background-color: rgba(157, 157, 157, 0.8);
+}
+
+.score-title {
+    color: #000;
+}
+
+.dai-score-img {
+    max-width: 100%;
+    background-color: #000;
+}
+
+.dai-score-img img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.score-table {
+    border: 1px solid #000;
+    background-color: #ddd;
+}
+
+.score-table th {
+    color: #333;
+    background-color: #ffb342;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #333;
+}
+
+.score-table th:last-child {
+    border-right: none;
+}
+
+.score-table td {
+    color: #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.score-table td:last-child {
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+/* 携帯用設定
+================================= */
+
+@media screen and (max-width: 768px) {
+
+
+
+/* トップページメニュー、携帯用設定。
+================================= */
+
+    #hamburger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 25px;
+        margin: 0 0 0 auto;
+    }
+
+    #hamburger span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ffb342;
+        transform: translateY(-50%);
+    }
+
+    #hamburger::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffb342;
+    }
+
+    #hamburger::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70%;
+        height: 2px;
+        background-color: #ffb342;
+    }
+
+    .pc-nav {
+        display: none;
+    }
+
+    .sp-nav {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    .sp-nav ul {
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+    }
+
+    .sp-nav li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sp-nav li span {
+        font-size: 15px;
+        color: #FFF;
+    }
+
+    .sp-nav li a, .sp-nav li span {
+        display: block;
+        color: #ffb342;
+        padding: 20px 0;
+    }
+
+    .sp-nav .close {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .sp-nav .close::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #ffb342;
+        transform: rotate(45deg);
+    }
+
+    .sp-nav .close::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #ffb342;
+        transform: rotate(-45deg);
+    }
+
+    .toggle {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

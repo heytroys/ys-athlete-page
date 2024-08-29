@@ -155,9 +155,7 @@ body {
 }
 
 .arrow {
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 25px solid rgb(255, 86, 86);
+    color: rgb(255, 94, 94);
     animation: bounce 1s infinite;
 }
 
@@ -356,53 +354,13 @@ body {
 }
 
 
-/* news.html
+/* score.php info.php、 headerタグ内以外は、htmlに直でスタイル書き。
 ============================ */
 
-#news {
-    padding-top: 200px;
-}
-
-#news .news-img img {
-    border-radius: 7px;
-}
-
-#news h2 {
-    display: inline-block;
-    border-bottom: 2px solid #555;
-}
-
-#news h6 {
-    border-left: 2px solid #555;
-}
-
-#news p {
-    border-bottom: 1px solid #888;
-}
 
 
-/* info.html
+/* info.php
 ============================ */
 
-#info {
-    padding-top: 200px;
-}
 
-#info h2 {
-    display: inline-block;
-    border-bottom: 2px solid #555;
-}
-
-#info .info-img img {
-    border-radius: 7px;
-}
-
-#info .info-contents {
-    background-color: #ddd;
-    border-radius: 7px;
-}
-
-#info h4 {
-    margin: 40px auto 60px auto;
-}
 

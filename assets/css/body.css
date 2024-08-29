@@ -54,6 +54,26 @@ body {
     border-radius: 7px;
 }
 
+#base h2 {
+    display: inline-block;
+    border-bottom: 2px solid rgb(68, 118, 255);
+}
+
+
+#base .base-link1 {
+    background-color: #ddd;
+    border-radius: 7px;
+}
+
+.base-ishii-img img {
+    border-radius: 7px;
+}
+
+.base-link1 a {
+    background-color: rgb(68, 118, 255);
+    border-radius: 7px;
+}
+
 #my-profile {
     margin: 150px auto 60px auto;
     background-color: #ddd;
